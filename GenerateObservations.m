@@ -380,6 +380,13 @@ ax = gca;
 ax.FontSize = 20;
 clim([min(u0(:,J0)),max(u0(:,J0))])
 
+% Plot the eigenvalues
+figure()
+axes('FontSize', 20, 'NextPlot','add')
+plot(lambdas_basis,'.','Linewidth',3)
+xlabel('j', 'FontSize', 15);
+ylabel('\lambda_j', 'FontSize', 15);
+
 %%
 % 2.2 Likelihood of the ground truth
 
