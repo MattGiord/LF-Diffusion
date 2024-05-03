@@ -162,7 +162,7 @@ tic
     % tracker of run time
 
 % Discretisation of time interval for simulation
-simulation_size = 1e6; 
+simulation_size = 5e8; 
 deltaT_sim = .000005; 
     % time interval between simulated values
 T = simulation_size*deltaT_sim; 
