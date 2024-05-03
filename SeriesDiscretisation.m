@@ -6,19 +6,17 @@
 %%
 % Contents:
 %
-% 1. Discretisation of the parameter space via the Dirichlet-Laplacian
-%    eigenbasis
+% 1. Discretisation of the parameter space via the Laplacian eigenbasis
 %
 % 2. Projection of F_0 onto the eigenbasis
 %
 % Requires (part of) the output of GenerateObservations.m
 
 %%
-% 1. Discretisation of the parameter space via the Neumann-Laplacian
-%    eigenbasis
+% 1. Discretisation of the parameter space via the Laplacian eigenbasis
 
 %%
-% Mesh for computation of the Neumann-Laplacian eigenpairs
+% Mesh for computation of the eigenpairs
 
 model_prior = createpde(); 
 geometryFromEdges(model_prior,geom);
@@ -46,16 +44,16 @@ F0_mesh_prior = F0(mesh_nodes_prior(1,:),mesh_nodes_prior(2,:));
 F0_bary_prior=F0(barycenters_prior(1,:),barycenters_prior(2,:));
 
 %%
-% Solve elliptic eigenvalue problem for the Neumann-Laplacian
+% Solve elliptic eigenvalue problem for the Laplacian
 
 tic
 
 % Specity homogeneous Dirichlet boundary conditions
-applyBoundaryCondition(model,'neumann','Edge',...
-    1:model.Geometry.NumEdges,'g',0,'q',0); 
+applyBoundaryCondition(model_prior,'dirichlet','Edge',...
+    1:model.Geometry.NumEdges,'u',0); 
 % Specify coefficients for eigenvalue equation
 specifyCoefficients(model_prior,'m',0,'d',1,'c',1,'a',0,'f',1);
-range_prior = [-1,750]; 
+range_prior = [-1,1000]; 
     % range to search for eigenvalues
 results = solvepdeeig(model_prior,range_prior); 
     % solve eigenvalue equation
@@ -77,7 +75,7 @@ e_basis(:,1:J_basis) = e_basis(:,1:J_basis)*sqrt(mesh_nodes_num_prior/vol);
 
 F0_coeff=zeros(J_basis,1); 
     % initialises vector to store the Fourier coefficients of F_0 in the 
-    % Neumann-Laplacian eigenbasis
+    % Laplacian eigenbasis
 
 % Compute the Fourier coefficients of F_0
 for j=1:J_basis
