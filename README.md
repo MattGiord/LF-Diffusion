@@ -1,6 +1,6 @@
 MATLAB code for statistical analysis with low-frequency diffusion data (in a divergence form model).
 
-Author: Matteo Giordano, https://matteogiordano.weebly.com, and Sven Wang, https://sven-wang.weebly.com.
+Authors: Matteo Giordano, https://matteogiordano.weebly.com, and Sven Wang, https://sven-wang.weebly.com.
 
 This repository is associated with the article "Statistical algorithms for low-frequency diffusion data: A PDE approach" by Matteo Giordano and Sven Wang. The abstract of the paper is:
 
