@@ -242,7 +242,7 @@ legend('Log-likelihood of f_{\vartheta_m}','Log-likelihood of f_0',...
 %%
 % MCMC average and estimation error
 
-burnin=5;
+burnin=2500;
 
 % Compute MCMC average
 theta_mean = mean(pCN_theta(:,(burnin+1):pCN_length),2);
