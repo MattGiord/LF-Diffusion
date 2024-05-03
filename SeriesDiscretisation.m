@@ -48,7 +48,7 @@ F0_bary_prior=F0(barycenters_prior(1,:),barycenters_prior(2,:));
 
 tic
 
-% Specity homogeneous Dirichlet boundary conditions
+% Specify homogeneous Dirichlet boundary conditions
 applyBoundaryCondition(model_prior,'dirichlet','Edge',...
     1:model.Geometry.NumEdges,'u',0); 
 % Specify coefficients for eigenvalue equation
