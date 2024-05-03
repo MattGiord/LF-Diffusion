@@ -8,13 +8,14 @@ This repository is associated with the article "Statistical algorithms for low-f
 
 This repository contains the MATLAB code to replicate the numerical simulation study presented in the article. It contains the following:
 
-GenerateObservations.m, code to generate the observations (discrete-time observations of a stochastic diffusion process).
-SeriesDiscretisation.m, code to implement the parameter space discretisation via the Laplacian eigenpairs.
-pCNSeries.m, code to implement posterior inference with Gaussian series priors defined Laplacian eigenbasis via the pCN algorithm for posterior samping. It requires the output of GenerateObservations.m and SeriesDiscretisation.m.
-ULA.m, code to implement posterior inference with Gaussian series priors defined Laplacian eigenbasis via the ULA for posterior samping. It requires the output of GenerateObservations.m and SeriesDiscretisation.m.
-GradDescent.m, code to compute the MAP estimate associated to Gaussian series priors defined Laplacian eigenbasis via the gradient descent algorithm. It requires the output of GenerateObservations.m and SeriesDiscretisation.m.
-pCNMatern.m, code to implement posterior inference with the Matern process prior via the pCN algorithm for posterior samping. It requires the output of GenerateObservations.m and SeriesDiscretisation.m and the auxiliary function K_mat.m.
-K_mat.m, auxiliary code for the Matérn covariance kernel, required by pCNMatern.m.
+1. GenerateObservations.m, code to generate the observations (discrete-time observations of a stochastic diffusion process).
+2. SeriesDiscretisation.m, code to implement the parameter space discretisation via the Laplacian eigenpairs.
+3. pCNSeries.m, code to implement posterior inference with Gaussian series priors defined Laplacian eigenbasis via the pCN algorithm for posterior samping. It requires the output of GenerateObservations.m and SeriesDiscretisation.m.
+4. ULA.m, code to implement posterior inference with Gaussian series priors defined Laplacian eigenbasis via the ULA for posterior samping. It requires the output of GenerateObservations.m and SeriesDiscretisation.m.
+5. GradDescent.m, code to compute the MAP estimate associated to Gaussian series priors defined Laplacian eigenbasis via the gradient descent algorithm. It requires the output of GenerateObservations.m and SeriesDiscretisation.m.
+6. pCNMatern.m, code to implement posterior inference with the Matern process prior via the pCN algorithm for posterior samping. It requires the output of GenerateObservations.m and SeriesDiscretisation.m and the auxiliary function K_mat.m.
+7. K_mat.m, auxiliary code for the Matérn covariance kernel, required by pCNMatern.m.
+
 For questions or for reporting bugs, please e-mail Matteo Giordano (matteo.giordano@unito.it)
 
 Please cite the following article if you use this repository in your research: Giordano, M., and Wang, S. (2024). Statistical algorithms for low-frequency diffusion data: A PDE approach.
