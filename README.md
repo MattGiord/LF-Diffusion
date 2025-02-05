@@ -1,3 +1,5 @@
+# LF-Diffusion
+
 MATLAB code for statistical analysis with low-frequency diffusion data (in a divergence form model).
 
 Authors: Matteo Giordano, https://matteogiordano.weebly.com, and Sven Wang, https://sven-wang.weebly.com.
@@ -16,6 +18,6 @@ This repository contains the MATLAB code to replicate the numerical simulation s
 6. pCNMatern.m, code to implement posterior inference with the Matern process prior via the pCN algorithm for posterior samping. It requires the output of GenerateObservations.m and SeriesDiscretisation.m and the auxiliary function K_mat.m.
 7. K_mat.m, auxiliary code for the Matérn covariance kernel, required by pCNMatern.m.
 
-For questions or for reporting bugs, please e-mail Matteo Giordano (matteo.giordano@unito.it)
+For questions or for reporting bugs, please e-mail Matteo Giordano (matteo.giordano@unito.it).
 
 Please cite the following article if you use this repository in your research: Giordano, M., and Wang, S. (2024). Statistical algorithms for low-frequency diffusion data: A PDE approach.
